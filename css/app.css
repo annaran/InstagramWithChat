@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 120%;
+    overflow: none;
+    overflow-y: scroll;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    padding: 0px 10%;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    z-index: 3;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav form {
+    position: relative;
+}
+
+nav form svg {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    height: 45px;
+    padding: 0px 50px 0px 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+#frmSignup, #frmLogin {
+    margin-top: 40px;
+
+}
+
+
+.search-mode-header {
+    display: block;
+    align-items: center;
+    position: relative;
+    /*  width: 100%;
+      height: 100%;*/
+    padding: 90px 10% 0px 10%;
+    text-align: center;
+    text-decoration: underline overline;
+    font-weight: bold;
+    font-size: large;
+}
+
+.undernav {
+    display: block;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 100px 10% 100px 10%;
+}
+
+.profilepic img {
+    position: relative;
+    /*width: 100%;*/
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.fullsizepic img {
+    position: relative;
+    /*width: 100%;*/
+    height: 500px;
+    border: 1px solid rgba(0, 0, 0, .2);
+
+}
+
+.thumbnailpic img {
+    position: relative;
+    /*width: 100%;*/
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+.search-box input[type=text] {
+    float: left;
+    border: 1px solid red;
+    width: 100%;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.search-result {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    margin-top: 40px;
+}
+
+
+.search-result a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.search-result a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.search-result a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+
+.comment p {
+    border: 2px solid grey;
+    border-radius: 3px;
+    background-color: #cccccc;
+}
+
+
+.button-red {
+    background-color: red; /* red */
+    color: white;
+    width: 10%;
+    text-align: center;
+    font-size: small;
+    border-radius: 3px;
+}
+
+
+
+/*button {
+    background-color: black; !* red *!
+    color: white;
+    width: auto;
+    text-align: center;
+    font-size: small;
+    border-radius: 3px;
+}*/
+
+input[type=button], input[type=submit]{
+    background-color: black; /* red */
+    color: white;
+    width: auto;
+    text-align: center;
+    font-size: small;
+    border-radius: 3px;
+}
+
+input[type=file]{
+
+}
+
+
+/*.button-red:hover {
+  background-color: red; !* red *!
+  color: white;
+  width: 10%;
+  text-align: center;
+  font-size: small;
+}*/
+
+#submit-comment {
+    background-color: black; /* red */
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+}
+
+
+/* unvisited link */
+a:link {
+    color: darkgrey;
+    text-decoration: none;
+
+}
+
+/* visited link */
+a:visited {
+    color: gray;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: darkred;
+    text-decoration: none;
+
+
+}
+
+/* selected link */
+a:active {
+    color: darkred;
+    text-decoration: none;
+}
+
+
+/***********************************************************
+///////////////////////////////////////////////////// */
+
+
+/*buttons with unread messages*/
+
+
+.unread-buttons-block{
+    position: fixed;
+    bottom: auto;
+    right: 30px;
+    width: 280px;
+}
+
+
+.open-unread-buttons {
+    background-color: black; /* Green background */
+    border: 1px dashed red; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+
+
+}
+
+#open-unread-buttons {
+    background-color: black; /* Green background */
+    border: 1px dashed red; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+
+
+}
+
+
+
+
+.open-unread-buttons button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.open-unread-buttons button:hover {
+    background-color: #3e8e41;
+}
+
+
+{
+    box-sizing: border-box
+;
+}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+
+.open-private-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 380px;
+    width: 280px;
+}
+
+
+
+/* The popup chat - hidden by default */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    background-color: #555555;
+}
+
+
+.private-chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 365px;
+    border: 3px solid darkred;
+    z-index: 9;
+}
+
+
+
+
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 350px;
+    padding: 10px;
+    background-color: white;
+}
+
+
+
+.message p {
+
+    border-radius: 0px;
+    background-color: whitesmoke;
+    font-size: small;
+}
+
+.private-message p {
+
+    border-radius: 0px;
+    background-color: whitesmoke;
+    font-size: small;
+}
+
+
+
+
+
+/* Full-width textarea */
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 50px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+/* private chatbox */
+
+.form-container-private {
+    max-width: 350px;
+    padding: 10px;
+    background-color: lightgrey;
+    color: darkred;
+}
+
+/* Full-width textarea */
+.form-container-private textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 50px;
+    color: darkred;
+}
+
+/* When the textarea gets focus, do something */
+.form-container-private textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container-private .btn {
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container-private .cancel {
+    background-color: red;
+
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+/************************************************************
+
+/**************************************************/
+/**************************************************/
+/**************************************************/
+.page {
+    position: relative;
+    padding: 100px 10% 100px 10%;
+}
+
+
+/**************************************************/
+/**************************************************/
+/**************************************************/
+.pullRight {
+    text-align: right;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mt100 {
+    margin-top: 100px;
+}
+
+.sm {
+    font-size: 80%;
+}
+
+.lg {
+    font-size: 120%;
+}
+
+.xlg {
+    font-size: 150%;
+}
+
+.strong {
+    font-weight: 400;
+}
+
+/**************************************************/
+/**************************************************/
+/**************************************************/
+
+
+/**************************************************/
+/**************************************************/
+/**************************************************/
+
+
+#index {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-gap: 20px;
+}
+
+div.image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+div.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.emotions {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

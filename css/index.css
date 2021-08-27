@@ -1,0 +1,26 @@
+#index{
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;  
+  grid-gap: 20px;
+}
+div.image{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border: 1px solid rgba(0,0,0,.2);
+}
+div.image img{
+  width: 100%;
+  height: 100%;
+}
+.emotions{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  text-align: right;
+  background-color: rgba(255,255,255,.8); 
+}
+svg.green{
+  fill: green;
+}
